@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FARM — Force-Aware Robotic Manipulation</title>
+  <meta name="description" content="Project page for the paper: Tactile-Conditioned Diffusion Policy for Force-Aware Robotic Manipulation (FARM)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --accent: #22c55e; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .farm-gradient { background: linear-gradient(135deg, #f0fdf4, #ffffff 60%, #ecfdf5); }
+    .btn { display:inline-flex; align-items:center; gap:.5rem; border-radius:1rem; padding:.6rem 1rem; font-weight:600; box-shadow:0 1px 2px rgba(0,0,0,.07); }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-ghost { border:1px solid #a7f3d0; color:#065f46; }
+    .badge { border-radius:9999px; padding:.25rem .6rem; font-size:.75rem; font-weight:600; background:#ecfdf5; color:#065f46; }
+    .sparkle::after { content: ' 🌱'; }
+    /* playful wheat divider */
+    .wheat-divider { position:relative; overflow:hidden; }
+    .wheat-divider svg { display:block; width:100%; height:80px; }
+    .card { border:1px solid #d1fae5; background:white; border-radius:1rem; overflow:hidden; }
+  </style>
+</head>
+<body class="farm-gradient text-slate-800">
+  <!-- Header / Hero -->
+  <header class="relative isolate text-center py-20">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(50rem_30rem_at_50%_-10%,rgba(16,185,129,.08),transparent)]"></div>
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-emerald-900 sparkle">
+        Tactile-Conditioned Diffusion Policy for<br />
+        <span class="text-emerald-600">Force-Aware Robotic Manipulation</span>
+      </h1>
+      <p class="mt-4 text-emerald-700 text-lg">This project builds on the <a href="https://actuated-umi.github.io/" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Actuated UMI</a> platform for tactile and force-aware robotic control.</p>
+    </div>
+  </header>
+
+  <!-- Quick links -->
+  <section id="paper" class="border-y border-emerald-200 bg-white/70">
+    <div class="mt-8 flex  mx-auto px-6 py-8 justify-center gap-6">
+      <a class="btn btn-primary" href="#paper">
+        <!-- arXiv logo (simple) -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 7.4v9.2l7 3.9 7-3.9V7.4l-7-3.1zm-2.7 9.5h5.4v1.8H9.3v-1.8zm0-3.6h7.2V12H9.3V10.2z"></path></svg>
+        arXiv (paper)
+      </a>
+      <a class="btn btn-ghost" href="#code">
+        <!-- GitHub mark -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.55v-2.1c-3.2.7-3.87-1.37-3.87-1.37-.53-1.35-1.29-1.7-1.29-1.7-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.75 1.28 3.42.98.11-.77.41-1.28.75-1.57-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.16 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.84 1.2 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        Code (coming soon)
+      </a>
+    </div>
+  </section>
+
+  <!-- Abstract -->
+  <section id="abstract" class="max-w-4xl mx-auto px-6 py-14">
+    <h2 class="text-2xl font-extrabold mb-4 text-emerald-900">Abstract</h2>
+    <div class="prose text-emerald-900 leading-relaxed">
+      <p>Contact-rich manipulation depends on applying the correct grasp forces throughout the manipulation task, especially when handling fragile or deformable objects. Most existing imitation learning approaches often treat visuotactile feedback only as an additional observation, leaving applied forces as an uncontrolled consequence of gripper commands. In this work, we present Force-Aware Robotic Manipulation (FARM), an imitation learning framework that integrates high-dimensional tactile data to infer tactile-conditioned force signals, which in turn define a matching force-based action space.</p>
+      <p>We collect human demonstrations using a modified version of the handheld Universal Manipulation Interface (UMI) gripper that integrates a GelSight Mini visual tactile sensor. For deploying the learned policies, we developed an actuated variant of the <a href="https://actuated-umi.github.io/" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Actuated UMI</a> gripper with geometry matching our handheld version. During policy rollouts, the proposed FARM diffusion policy jointly predicts robot pose, grip width, and grip force. FARM outperforms several baselines across three tasks with distinct force requirements—high-force, low-force, and dynamic force adaptation—demonstrating the advantages of its two key components: leveraging force-grounded, high-dimensional tactile observations and a force-based control space. The codebase and design files will be open-sourced.</p>
+    </div>
+  </section>
+
+  <!-- Single Project Video -->
+  <section id="video" class="max-w-5xl mx-auto px-6 pb-4">
+    <h2 class="text-2xl font-extrabold mb-4 text-emerald-900">Project Video</h2>
+    <div class="rounded-2xl overflow-hidden shadow">
+      <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/VIDEO_ID" title="Project Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p class="mt-2 text-sm text-emerald-700">Replace <code>VIDEO_ID</code> with your YouTube ID.</p>
+  </section>
+
+  <!-- Results (GIF placeholders for paper experiments) -->
+  <section id="results" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="flex items-center justify-between mb-2">
+      <h2 class="text-2xl font-extrabold text-emerald-900">Results — Paper Experiments</h2>
+      <span class="badge">GIFs</span>
+    </div>
+    <p class="text-sm text-emerald-700 mb-6">Drop your experiment GIFs matching the paper into <code>assets/gifs/</code> and update filenames if needed.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <figure class="card">
+        <img src="assets/gifs/exp-high-force.gif" alt="High-Force Insertion" class="w-full aspect-video object-cover" />
+        <figcaption class="p-4 text-sm text-emerald-700">Task A — High-Force Insertion</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/gifs/exp-low-force.gif" alt="Low-Force Picking" class="w-full aspect-video object-cover" />
+        <figcaption class="p-4 text-sm text-emerald-700">Task B — Low-Force Picking</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="assets/gifs/exp-dynamic.gif" alt="Dynamic Force Adaptation" class="w-full aspect-video object-cover" />
+        <figcaption class="p-4 text-sm text-emerald-700">Task C — Dynamic Force Adaptation</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Authors -->
+  <section id="authors" class="max-w-6xl mx-auto px-6 pb-6">
+    <h2 class="text-2xl font-extrabold mb-4 text-emerald-900">Authors</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="card p-4 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">E</div>
+        <div>
+          <div class="font-semibold text-emerald-800">Erik Helmut*</div>
+          <div class="text-xs text-emerald-700">Corresponding author</div>
+        </div>
+      </div>
+      <div class="card p-4 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">N</div>
+        <div>
+          <div class="font-semibold text-emerald-800">Niklas Funk</div>
+        </div>
+      </div>
+      <div class="card p-4 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">T</div>
+        <div>
+          <div class="font-semibold text-emerald-800">Tim Schneider</div>
+        </div>
+      </div>
+      <div class="card p-4 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">C</div>
+        <div>
+          <div class="font-semibold text-emerald-800">Cristiana de Farias</div>
+        </div>
+      </div>
+      <div class="card p-4 flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">J</div>
+        <div>
+          <div class="font-semibold text-emerald-800">Jan Peters</div>
+        </div>
+      </div>
+    </div>
+    <p class="mt-2 text-xs text-emerald-700">* equal contribution / corresponding author</p>
+  </section>
+
+  <!-- Logos -->
+  <section id="logos" class="max-w-5xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-extrabold mb-6 text-emerald-900">Project Sponsors & Collaborators</h2>
+    <div class="flex flex-wrap items-center justify-center gap-10">
+      <img src="assets/logos/iaslab.png" alt="IAS Lab" class="h-16" />
+      <img src="assets/logos/arise.png" alt="ARISE Project" class="h-16" />
+      <img src="assets/logos/university.png" alt="University Logo" class="h-16" />
+      <img src="assets/logos/eu.png" alt="EU Logo" class="h-16" />
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-emerald-50 border-t border-emerald-200">
+    <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-emerald-700 flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> FARM Project • Built with 🌾 • <a href="#" class="hover:underline">GitHub (coming soon)</a></div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" href="#abstract">Abstract</a>
+        <a class="hover:underline" href="#video">Video</a>
+        <a class="hover:underline" href="#results">Results</a>
+        <a class="hover:underline" href="#authors">Authors</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
