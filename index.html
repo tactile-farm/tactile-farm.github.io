@@ -34,25 +34,46 @@
         Tactile-Conditioned Diffusion Policy for<br />
         <span class="text-emerald-600">Force-Aware Robotic Manipulation</span>
       </h1>
-      <p class="mt-4 text-emerald-700 text-lg">This project builds on the <a href="https://actuated-umi.github.io/" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:underline">Actuated UMI</a> platform for tactile and force-aware robotic control.</p>
+      <p class="mt-4 text-emerald-700 text-lg">
+        This project explores tactile and force-aware robotic control using diffusion policies.
+      </p>
     </div>
   </header>
 
-  <!-- Quick links -->
-  <section id="paper" class="border-y border-emerald-200 bg-white/70">
-    <div class="mt-8 flex  mx-auto px-6 py-8 justify-center gap-6">
-      <a class="btn btn-primary" href="#paper">
-        <!-- arXiv logo (simple) -->
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 7.4v9.2l7 3.9 7-3.9V7.4l-7-3.1zm-2.7 9.5h5.4v1.8H9.3v-1.8zm0-3.6h7.2V12H9.3V10.2z"></path></svg>
-        arXiv (paper)
-      </a>
-      <a class="btn btn-ghost" href="#code">
-        <!-- GitHub mark -->
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.55v-2.1c-3.2.7-3.87-1.37-3.87-1.37-.53-1.35-1.29-1.7-1.29-1.7-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.75 1.28 3.42.98.11-.77.41-1.28.75-1.57-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.16 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.84 1.2 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
-        Code (coming soon)
-      </a>
+  <!-- Quick Links / Navigation -->
+  <section id="links" class="border-y border-emerald-200 bg-white/70">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <!-- Actuated UMI -->
+        <a href="https://actuated-umi.github.io/" target="_blank" rel="noopener"
+           class="btn btn-outline flex items-center gap-2 text-emerald-700 border-emerald-400 hover:bg-emerald-50 transition">
+          <!-- Icon (spark or robot optional) -->
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.5 3v6l4 2-.5.87-4.5-2.37V5h1z"></path>
+          </svg>
+          Actuated UMI Platform
+        </a>
+
+        <!-- arXiv -->
+        <a class="btn btn-primary flex items-center gap-2" href="#paper">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l9 5v10l-9 5-9-5V7l9-5zm0 2.3L5 7.4v9.2l7 3.9 7-3.9V7.4l-7-3.1zm-2.7 9.5h5.4v1.8H9.3v-1.8zm0-3.6h7.2V12H9.3V10.2z"></path>
+          </svg>
+          arXiv (paper)
+        </a>
+
+        <!-- GitHub -->
+        <a class="btn btn-ghost flex items-center gap-2" href="#code">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.07 3.29 9.36 7.86 10.87.58.11.79-.25.79-.55v-2.1c-3.2.7-3.87-1.37-3.87-1.37-.53-1.35-1.29-1.7-1.29-1.7-1.06-.73.08-.71.08-.71 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.75 1.28 3.42.98.11-.77.41-1.28.75-1.57-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.52.11-3.16 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.64.23 2.86.11 3.16.75.81 1.2 1.84 1.2 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/>
+          </svg>
+          Code (coming soon)
+        </a>
+      </div>
     </div>
   </section>
+</body>
+
 
   <!-- Abstract -->
   <section id="abstract" class="max-w-4xl mx-auto px-6 py-14">
@@ -96,52 +117,64 @@
   </section>
 
   <!-- Authors -->
-  <section id="authors" class="max-w-6xl mx-auto px-6 pb-6">
-    <h2 class="text-2xl font-extrabold mb-4 text-emerald-900">Authors</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-      <div class="card p-4 flex items-center gap-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">E</div>
-        <div>
-          <div class="font-semibold text-emerald-800">Erik Helmut*</div>
-          <div class="text-xs text-emerald-700">Corresponding author</div>
-        </div>
-      </div>
-      <div class="card p-4 flex items-center gap-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">N</div>
-        <div>
-          <div class="font-semibold text-emerald-800">Niklas Funk</div>
-        </div>
-      </div>
-      <div class="card p-4 flex items-center gap-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">T</div>
-        <div>
-          <div class="font-semibold text-emerald-800">Tim Schneider</div>
-        </div>
-      </div>
-      <div class="card p-4 flex items-center gap-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">C</div>
-        <div>
-          <div class="font-semibold text-emerald-800">Cristiana de Farias</div>
-        </div>
-      </div>
-      <div class="card p-4 flex items-center gap-4">
-        <div class="w-14 h-14 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold">J</div>
-        <div>
-          <div class="font-semibold text-emerald-800">Jan Peters</div>
-        </div>
+<section id="authors" class="max-w-6xl mx-auto px-6 pb-10">
+  <h2 class="text-2xl font-extrabold mb-6 text-emerald-900">Authors</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+    <!-- Author 1 -->
+    <div class="card p-4 flex flex-col items-center text-center bg-white/70 rounded-2xl shadow-sm hover:shadow-md transition">
+      <img src="images/erik.jpg" alt="Erik Helmut" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-200 mb-3" />
+      <div>
+        <div class="font-semibold text-emerald-800">Erik Helmut*</div>
+        <div class="text-xs text-emerald-700">Corresponding author</div>
       </div>
     </div>
-    <p class="mt-2 text-xs text-emerald-700">* equal contribution / corresponding author</p>
-  </section>
+
+    <!-- Author 2 -->
+    <div class="card p-4 flex flex-col items-center text-center bg-white/70 rounded-2xl shadow-sm hover:shadow-md transition">
+      <img src="assets/NiklasFunkProfileNew.png" alt="Niklas Funk" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-200 mb-3" />
+      <div>
+        <div class="font-semibold text-emerald-800">Niklas Funk</div>
+      </div>
+    </div>
+
+    <!-- Author 3 -->
+    <div class="card p-4 flex flex-col items-center text-center bg-white/70 rounded-2xl shadow-sm hover:shadow-md transition">
+      <img src="assets/portrait_tim_v2.jpg" alt="Tim Schneider" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-200 mb-3" />
+      <div>
+        <div class="font-semibold text-emerald-800">Tim Schneider</div>
+      </div>
+    </div>
+
+    <!-- Author 4 -->
+    <div class="card p-4 flex flex-col items-center text-center bg-white/70 rounded-2xl shadow-sm hover:shadow-md transition">
+      <img src="assets/farias_profile.jpg" alt="Cristiana de Farias" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-200 mb-3" />
+      <div>
+        <div class="font-semibold text-emerald-800">Cristiana de Farias</div>
+      </div>
+    </div>
+
+    <!-- Author 5 -->
+    <div class="card p-4 flex flex-col items-center text-center bg-white/70 rounded-2xl shadow-sm hover:shadow-md transition">
+      <img src="assets/JanMugshot.jpg" alt="Jan Peters" class="w-20 h-20 rounded-full object-cover border-2 border-emerald-200 mb-3" />
+      <div>
+        <div class="font-semibold text-emerald-800">Jan Peters</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <p class="mt-4 text-xs text-emerald-700 text-center">* corresponding author</p> -->
+</section>
+
 
   <!-- Logos -->
   <section id="logos" class="max-w-5xl mx-auto px-6 py-10">
-    <h2 class="text-2xl font-extrabold mb-6 text-emerald-900">Project Sponsors & Collaborators</h2>
+    <!-- <h2 class="text-2xl font-extrabold mb-6 text-emerald-900">Project Sponsors & Collaborators</h2> -->
     <div class="flex flex-wrap items-center justify-center gap-10">
-      <img src="assets/logos/iaslab.png" alt="IAS Lab" class="h-16" />
-      <img src="assets/logos/arise.png" alt="ARISE Project" class="h-16" />
-      <img src="assets/logos/university.png" alt="University Logo" class="h-16" />
-      <img src="assets/logos/eu.png" alt="EU Logo" class="h-16" />
+      <img src="assets/iasLogo.png" alt="IAS Lab" class="h-16" />
+      <img src="assets/arise.png" alt="ARISE Project" class="h-16" />
+      <img src="assets/tuda_logo.png" alt="TUda Logo" class="h-16" />
+      <!-- <img src="assets/logos/eu.png" alt="EU Logo" class="h-16" /> -->
     </div>
   </section>
 
